@@ -54,6 +54,9 @@ class paths_class:
             'MDIO':   ('/sys/bus/mdio/devices/',\
                        '/mdio_name',\
                        '/mdio_eeprom'),
+            'LOCAL':   ('/home/bhishma/development/oom/misc/',\
+                       '/port_name',\
+                       '/eeprom'),
             }
 
 
@@ -143,6 +146,10 @@ class ports:
 
                 # CFP is actually unknown, so simulating simple for now
                 elif key == 'MDIO':
+                    portname = portlabel
+
+                # For local eeprom files
+                elif key == 'LOCAL':
                     portname = portlabel
 
                 elif key == 'ACCTON_AS5916_54XKS' or \
